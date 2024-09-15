@@ -1,6 +1,1 @@
-Thanks for downloading this template!
-
-Template Name: Eterna
-Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+This is a demo project for course SWE632.
