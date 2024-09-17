@@ -1,165 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Chat</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            color: #fff;
-        }
-        .chat-container {
-            width: 100%;
-            max-width: 1200px;
-            height: 90vh;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-        .chat-header {
-            background-color: rgba(0, 123, 255, 0.7);
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .chat-messages {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            scrollbar-width: thin;
-            scrollbar-color: #007bff #f4f4f4;
-        }
-        .message {
-            display: flex;
-            align-items: center;
-        }
-        .message.user {
-            justify-content: flex-end;
-        }
-        .message.bot {
-            justify-content: flex-start;
-        }
-        .message-content {
-            padding: 15px;
-            border-radius: 20px;
-            font-size: 16px;
-            max-width: 60%;
-            line-height: 1.5;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        .message.user .message-content {
-            background: #007bff;
-            color: #fff;
-            border-top-right-radius: 0;
-        }
-        .message.bot .message-content {
-            background: #f1f1f1;
-            color: #333;
-            border-top-left-radius: 0;
-        }
-        .chat-input {
-            display: flex;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.15);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .chat-input input {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: 25px;
-            font-size: 18px;
-            background: rgba(255, 255, 255, 0.7);
-            color: #333;
-            outline: none;
-            transition: background-color 0.2s ease;
-        }
-        .chat-input input:focus {
-            background: #fff;
-        }
-        .chat-input button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 15px 20px;
-            border: none;
-            border-radius: 25px;
-            margin-left: 15px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.2s ease;
-        }
-        .chat-input button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Zenithia Live Chat</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-<div class="chat-container">
-    <div class="chat-header">Live Chat</div>
-    <div class="chat-messages" id="chatMessages">
-        <!-- Chat messages will appear here -->
-    </div>
-    <div class="chat-input">
-        <input type="text" id="userInput" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-</div>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<script>
-    function sendMessage() {
-        const inputField = document.getElementById('userInput');
-        const message = inputField.value.trim();
-        if (message !== '') {
-            const chatMessages = document.getElementById('chatMessages');
-            
-            // User message
-            const userMessage = document.createElement('div');
-            userMessage.classList.add('message', 'user');
-            const messageContent = document.createElement('div');
-            messageContent.classList.add('message-content');
-            messageContent.textContent = message;
-            userMessage.appendChild(messageContent);
-            chatMessages.appendChild(userMessage);
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
 
-            // Simulate bot response
-            const botMessage = document.createElement('div');
-            botMessage.classList.add('message', 'bot');
-            const botContent = document.createElement('div');
-            botContent.classList.add('message-content');
-            botContent.textContent = "This is a bot response.";
-            botMessage.appendChild(botContent);
-            chatMessages.appendChild(botMessage);
+  <!-- Vendor CSS Files -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-            // Clear input field and scroll chat to the bottom
-            inputField.value = '';
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS for Chat Page -->
+  <style>
+    /* Custom styles for the chat page */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f4f4f4;
+      color: #333;
     }
-</script>
+
+    .chat-container {
+      max-width: 800px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 15px;
+      display: flex;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+    }
+
+    .message.bot {
+      justify-content: flex-start;
+    }
+
+    .message-content {
+      max-width: 60%;
+      padding: 10px 15px;
+      border-radius: 20px;
+      background-color: #f1f1f1;
+      position: relative;
+    }
+
+    .message.user .message-content {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .chat-input {
+      padding: 15px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+    }
+
+    .chat-input input {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .chat-input button {
+      white-space: nowrap;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .chat-container {
+        height: 60vh;
+      }
+
+      .message-content {
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body class="chat-page">
+
+  <!-- Header Section -->
+  <header id="header" class="header sticky-top">
+    <div class="branding">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Zenithia</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul class="nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Chat Container -->
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Live Chat</li>
+          </ol>
+        </nav>
+        <h1>Live Chat</h1>
+      </div>
+    </div>
+
+    <!-- Chat Section -->
+    <section id="chat" class="section chat">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="chat-container">
+          <div class="chat-messages" id="chatMessages">
+            <!-- Default greeting message from the bot will appear here -->
+          </div>
+          <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type a message..." class="form-control">
+            <button onclick="sendMessage()" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Include other necessary JS files -->
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for Chat Functionality -->
+  <script>
+    // Function to send the default message when the page loads
+    window.onload = function () {
+      const chatMessages = document.getElementById('chatMessages');
+      
+      // Create the default bot message
+      const defaultMessage = document.createElement('div');
+      defaultMessage.classList.add('message', 'bot');
+      const messageContent = document.createElement('div');
+      messageContent.classList.add('message-content');
+      messageContent.textContent = "Hello Dear! How can I help you?";
+      defaultMessage.appendChild(messageContent);
+      
+      // Append the message to the chat window
+      chatMessages.appendChild(defaultMessage);
+
+      // Scroll chat to the bottom if necessary
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    };
+
+    // Function to send a user message and simulate a bot response
+    function sendMessage() {
+      const inputField = document.getElementById('userInput');
+      const message = inputField.value.trim();
+      if (message !== '') {
+        const chatMessages = document.getElementById('chatMessages');
+
+        // User message
+        const userMessage = document.createElement('div');
+        userMessage.classList.add('message', 'user');
+        const messageContent = document.createElement('div');
+        messageContent.classList.add('message-content');
+        messageContent.textContent = message;
+        userMessage.appendChild(messageContent);
+        chatMessages.appendChild(userMessage);
+
+        // Simulate bot response
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('message', 'bot');
+        const botContent = document.createElement('div');
+        botContent.classList.add('message-content');
+        botContent.textContent = "This is a bot response.";
+        botMessage.appendChild(botContent);
+        chatMessages.appendChild(botMessage);
+
+        // Clear input field and scroll chat to the bottom
+        inputField.value = '';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
+  </script>
 
 </body>
+
 </html>
