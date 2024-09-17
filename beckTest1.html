@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Zenithia</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Eterna
+  * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <title>Quiz Form</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      font-size: 1.2rem;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color:white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #4CAF50;
+      background-color: #e7f4e7;
+    }
+  </style>
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header sticky-top">
+
+
+    <div class="branding">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Zenithia<br></h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+            <li><a href="team.html">Team</a></li>
+            <!-- <li><a href="pricing.html">Pricing</a></li> -->
+            <li><a href="blog.html">Blog</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Psychological Tests</li>
+          </ol>
+        </nav>
+        <h1>Psychological Tests</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container">
+
+       
+                <h2>Beck 20 Test</h2>
+                  <p>Please answer all 20 questions and click Submit:</p>
+
+                  <form id="quizForm">
+                    <!-- Question 1 -->
+                    <div class="question">
+                      <h3>1. I look forward to the future with hope and enthusiasm.</h3>
+                      <label><input type="radio" name="q1" value="Red" required> True</label><br>
+                      <label><input type="radio" name="q1" value="Blue"> False</label><br>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question">
+                      <h3>2. I might as well give up because t can’t make things better for myself.</h3>
+                      <label><input type="radio" name="q2" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q2" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question">
+                      <h3>3. When things are going badly, I am helped by knowing they can’t stay that way forever.
+                      </h3>
+                      <label><input type="radio" name="q3" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q3" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question">
+                      <h3>4. I can’t imagine what my life would be like in 10 years.</h3>
+                      <label><input type="radio" name="q4" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q4" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question">
+                      <h3>5. I have enough time to accomplish the things I most want to do.</h3>
+                      <label><input type="radio" name="q5" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q5" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question">
+                      <h3>6. In the future, I expect to succeed in what concerns me most.</h3>
+                      <label><input type="radio" name="q6" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q6" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="question">
+                      <h3>7.  My future seems dark to me.</h3>
+                      <label><input type="radio" name="q7" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q7" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="question">
+                      <h3>8. I expect to get more good things in life than the average person.</h3>
+                      <label><input type="radio" name="q8" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q8" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="question">
+                      <h3>9. I just don’t get the breaks, and there’s no reason to believe I will in the future.</h3>
+                      <label><input type="radio" name="q9" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q9" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="question">
+                      <h3>10. My past experiences have prepared me well for the future.</h3>
+                      <label><input type="radio" name="q10" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q10" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="question">
+                      <h3>11. All I can see ahead of me is unpleasantness rather than pleasantness.</h3>
+                      <label><input type="radio" name="q11" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q11" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="question">
+                      <h3>12. I don’t expect to get what I really want.</h3>
+                      <label><input type="radio" name="q12" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q12" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 13 -->
+                    <div class="question">
+                      <h3>13. When I look ahead to the future, I expect I will be happier than I am now.</h3>
+                      <label><input type="radio" name="q13" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q13" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="question">
+                      <h3>14. Things just won’t work out the way I want them to.</h3>
+                      <label><input type="radio" name="q14" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q14" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="question">
+                      <h3>15. I have great faith in the future.</h3>
+                      <label><input type="radio" name="q15" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q15" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="question">
+                      <h3>16. I never get what I want so it’s foolish to want anything.</h3>
+                      <label><input type="radio" name="q16" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q16" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 17 -->
+                    <div class="question">
+                      <h3>17. It is very unlikely that I will get any real satisfaction in the future.</h3>
+                      <label><input type="radio" name="q17" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q17" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="question">
+                      <h3>18. The future seems vague and uncertain to me.</h3>
+                      <label><input type="radio" name="q18" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q18" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 19 -->
+                    <div class="question">
+                      <h3>19. I can look forward to more good times than bad times.</h3>
+                      <label><input type="radio" name="q19" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q19" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="question">
+                      <h3>20. There’s no use in really trying to get something I want because I probably won’t get it.</h3>
+                      <label><input type="radio" name="q20" value="Car" required> True</label><br>
+                      <label><input type="radio" name="q20" value="Bike"> False</label><br>
+                    </div>
+
+                    <!-- Add more questions up to 10 in the same format -->
+
+                    <!-- Submit button -->
+                    <input type="submit" value="Submit">
+                  </form>
+
+                  <script>
+                    document.getElementById('quizForm').addEventListener('submit', function(event) {
+                      event.preventDefault();  // Prevent form from refreshing the page
+                      
+                      // Redirect to another page after form submission
+                      window.location.href = 'beckTest2.html';
+                    });
+                  </script>
+                  
+
+                  <!-- Result section
+                  <div id="result"></div> -->
+
+                  <!-- JavaScript to handle form submission -->
+                <!-- <script>
+                  document.getElementById('quizForm').addEventListener('submit', function(event) {
+                    event.preventDefault();  // Prevent form from refreshing the page
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    
+                    // Prepare the results to display
+                    let result = '<h3>Your Answers:</h3>';
+                    formData.forEach(function(value, key) {
+                      result += `<p>${key}: ${value}</p>`;
+                    });
+                    
+                    // Display the result
+                    document.getElementById('result').innerHTML = result;
+                  });
+                </script> -->
+        
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Skills Section -->
+    
+  </main>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
