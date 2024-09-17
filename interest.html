@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Zenithia</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="contact-page">
+  <header id="header" class="header sticky-top">
+    <div class="branding">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Zenithia</h1>
+        </a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container mt-5">
+      <div class="row justify-content-start">
+        <div class="col-md-8">
+          <h2>Find Your MindMate</h2>
+          <form action="personal-info.html" method="post">
+
+            <label for="interests">Select your interests:</label><br>
+            <input type="checkbox" id="music" name="interests" value="Music">
+            <label for="music">Music</label><br>
+            <input type="checkbox" id="sports" name="interests" value="Sports">
+            <label for="sports">Sports</label><br>
+            <input type="checkbox" id="movies" name="interests" value="Movies">
+            <label for="movies">Movies</label><br>
+            <input type="checkbox" id="tech" name="interests" value="Technology">
+            <label for="tech">Technology</label><br>
+            <input type="checkbox" id="books" name="interests" value="Books">
+            <label for="books">Books</label><br>
+            <input type="checkbox" id="travel" name="interests" value="Travel">
+            <label for="travel">Travel</label><br><br>
+
+            <label for="personality">Choose your personality traits:</label><br>
+            <input type="checkbox" id="introvert" name="personality" value="Introvert">
+            <label for="introvert">Introvert</label><br>
+            <input type="checkbox" id="extrovert" name="personality" value="Extrovert">
+            <label for="extrovert">Extrovert</label><br>
+            <input type="checkbox" id="adventurous" name="personality" value="Adventurous">
+            <label for="adventurous">Adventurous</label><br>
+            <input type="checkbox" id="creative" name="personality" value="Creative">
+            <label for="creative">Creative</label><br>
+            <input type="checkbox" id="analytical" name="personality" value="Analytical">
+            <label for="analytical">Analytical</label><br><br>
+
+            <label for="availability">When are you usually available to connect?</label><br>
+            <input type="radio" id="morning" name="availability" value="Morning">
+            <label for="morning">Morning</label><br>
+            <input type="radio" id="afternoon" name="availability" value="Afternoon">
+            <label for="afternoon">Afternoon</label><br>
+            <input type="radio" id="evening" name="availability" value="Evening">
+            <label for="evening">Evening</label><br><br>
+
+            <label for="topics">Preferred topics of conversation:</label><br>
+            <input type="checkbox" id="philosophy" name="topics" value="Philosophy">
+            <label for="philosophy">Philosophy</label><br>
+            <input type="checkbox" id="science" name="topics" value="Science">
+            <label for="science">Science</label><br>
+            <input type="checkbox" id="current_events" name="topics" value="Current Events">
+            <label for="current_events">Current Events</label><br>
+            <input type="checkbox" id="self_improvement" name="topics" value="Self Improvement">
+            <label for="self_improvement">Self Improvement</label><br>
+            <input type="checkbox" id="art" name="topics" value="Art">
+            <label for="art">Art</label><br><br>
+
+            <label for="other_interests">Describe your other interests:</label><br>
+            <textarea id="other_interests" name="other_interests" rows="4" cols="50" placeholder="Write your interests here..."></textarea><br><br>
+
+            <label for="communication">Preferred method of communication:</label><br>
+            <select id="communication" name="communication">
+              <option value="email">Email</option>
+              <option value="chat">Chat</option>
+              <option value="video_call">Video Call</option>
+              <option value="phone_call">Phone Call</option>
+            </select><br><br>
+
+            <input type="submit" value="Next" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
